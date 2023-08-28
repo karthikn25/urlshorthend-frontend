@@ -10,7 +10,7 @@ export default function ForgetPassword() {
       const user ={
         email
       }
-      const res = await fetch(`https://forget-mrly.onrender.com/api/user/forgot`,{
+      const res = await fetch(`http://localhost:7070/api/user/forgot`,{
         method:"POST",
         body:JSON.stringify(user),
         headers:{

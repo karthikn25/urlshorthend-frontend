@@ -13,7 +13,7 @@ export default function Verify() {
   }
   const  id  = localStorage.getItem("id")
  console.log(repass)
-  const res = await fetch(`https://forget-mrly.onrender.com/api/user/verify/${id}`,{
+  const res = await fetch(`http://localhost:7070/api/user/verify/${id}`,{
     method:"PUT",
     body:JSON.stringify(repass),
     headers:{
@@ -40,11 +40,11 @@ export default function Verify() {
       <h4 className="card-title" style={{background:"#1c1c1c"}}>Verify</h4>
       
       <div className="form-floating" style={{background:"#1c1c1c"}}>
-      <input type="password" className="form-control" id="floatingPassword" placeholder="Password" required="required" value={newPass} onChange={(e)=>setNewPass(e.target.value)}/>
+      <input type="password" className="form-control" id="floatingPassword" placeholder="Password" Required value={newPass} onChange={(e)=>setNewPass(e.target.value)}/>
       <label for="floatingPassword" style={{background:"none",color:"black"}}>New Password</label>
     </div><br/>
     <div className="form-floating" style={{background:"#1c1c1c"}}>
-      <input type="password" className="form-control" id="floatingPassword" placeholder="Password" required="required" value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}/>
+      <input type="password" className="form-control" id="floatingPassword" placeholder="Password" Required value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}/>
       <label for="floatingPassword" style={{background:"none",color:"black"}}>Confirm Password</label>
     </div>
     <div style={{marginTop:"50px",background:"#1c1c1c"}}>

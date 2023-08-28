@@ -13,7 +13,7 @@ export default function Login() {
       email,
       password
     }
-    const res = await fetch(`https://forget-mrly.onrender.com/api/user/login`,{
+    const res = await fetch(`http://localhost:7070/api/user/login`,{
       method:"POST",
       body:JSON.stringify(userDetail),
       headers:{
