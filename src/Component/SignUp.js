@@ -16,7 +16,7 @@ export default function SignUp() {
       password,
       contact
     }
-    const res = await fetch(`http://localhost:7070/api/user/signup`,{
+    const res = await fetch(`https://urlshortend.onrender.com/api/user/signup`,{
       method:"POST",
       body:JSON.stringify(newData),
       headers:{

@@ -13,7 +13,7 @@ export default function Verify() {
   }
   const  id  = localStorage.getItem("id")
  console.log(repass)
-  const res = await fetch(`http://localhost:7070/api/user/verify/${id}`,{
+  const res = await fetch(`https://urlshortend.onrender.com/api/user/verify/${id}`,{
     method:"PUT",
     body:JSON.stringify(repass),
     headers:{

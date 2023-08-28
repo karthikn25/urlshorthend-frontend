@@ -10,7 +10,7 @@ export default function ForgetPassword() {
       const user ={
         email
       }
-      const res = await fetch(`http://localhost:7070/api/user/forgot`,{
+      const res = await fetch(`https://urlshortend.onrender.com/api/user/forgot`,{
         method:"POST",
         body:JSON.stringify(user),
         headers:{

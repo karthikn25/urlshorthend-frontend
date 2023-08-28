@@ -16,7 +16,7 @@ export default function Home() {
     const urlDetail = {
       longurl
     }
-    const res = await fetch(`http://localhost:7070/api/short/post`,{
+    const res = await fetch(`https://urlshortend.onrender.com/api/short/post`,{
       method:"POST",
       body:JSON.stringify(urlDetail),
       headers:{
@@ -25,7 +25,7 @@ export default function Home() {
     });
     const data = await res.json()
     console.log(data)
-    alert(`http://localhost:7070/api/short/url/${data.urls.shorturl}`)
+    alert(`https://urlshortend.onrender.com/api/short/url/${data.urls.shorturl}`)
   }
 
   useEffect(()=>{
